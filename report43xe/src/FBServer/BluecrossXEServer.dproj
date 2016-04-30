@@ -1,0 +1,271 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{0BD3774E-09ED-4E16-BC4E-E8C31A5F71C9}</ProjectGuid>
+			<ProjectVersion>13.4</ProjectVersion>
+			<FrameworkType>VCL</FrameworkType>
+			<MainSource>BluecrossXEServer.dpr</MainSource>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Release</Config>
+			<Platform Condition="'$(Platform)'==''">Win32</Platform>
+			<TargetedPlatforms>3</TargetedPlatforms>
+			<AppType>Application</AppType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+			<Base_Win64>true</Base_Win64>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+			<Base_Win32>true</Base_Win32>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win64)'!=''">
+			<Cfg_1_Win64>true</Cfg_1_Win64>
+			<CfgParent>Cfg_1</CfgParent>
+			<Cfg_1>true</Cfg_1>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+			<Cfg_1_Win32>true</Cfg_1_Win32>
+			<CfgParent>Cfg_1</CfgParent>
+			<Cfg_1>true</Cfg_1>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win64)'!=''">
+			<Cfg_2_Win64>true</Cfg_2_Win64>
+			<CfgParent>Cfg_2</CfgParent>
+			<Cfg_2>true</Cfg_2>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+			<Cfg_2_Win32>true</Cfg_2_Win32>
+			<CfgParent>Cfg_2</CfgParent>
+			<Cfg_2>true</Cfg_2>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<VerInfo_Build>450</VerInfo_Build>
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<VerInfo_Release>5</VerInfo_Release>
+			<VerInfo_Keys>CompanyName=FinLine Co., Ltd.;FileDescription=HP/LS Application Server;FileVersion=1.0.5.450;InternalName=FSAppServer.exe;LegalCopyright=(C) 2012, FinLine Co., Ltd.;LegalTrademarks=(C) 2012, FinLine Co., Ltd.;OriginalFilename=FSAppServer.exe;ProductName=FSAppServer.exe;ProductVersion=1.0.0.0;Comments=Application Server for FinSoft HP/LS core;Written By=Montri Patchaiyo (thecrgrt@yahoo.com, thecrgrt@gmail.com)</VerInfo_Keys>
+			<VerInfo_Locale>1054</VerInfo_Locale>
+			<Manifest_File>None</Manifest_File>
+			<DCC_UsePackage>bindcompfmx;fmx;rtl;IndySystem;DbxClientDriver;dbrtl;bindcomp;inetdb;DataSnapClient;DataSnapServer;DataSnapCommon;DBXInterBaseDriver;DataSnapProviderClient;xmlrtl;DbxCommonDriver;IndyProtocols;dbxcds;DBXMySQLDriver;bindengine;soaprtl;DBXOracleDriver;dsnap;DBXInformixDriver;IndyCore;fmxase;DBXFirebirdDriver;inet;fmxobj;inetdbxpress;DBXSybaseASADriver;fmxdae;IPIndyImpl;dbexpress;DataSnapIndy10ServerTransport;$(DCC_UsePackage)</DCC_UsePackage>
+			<DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
+			<Icon_MainIcon>FSLOSAppServer_Icon3.ico</Icon_MainIcon>
+			<DCC_Define>Ex Support;$(DCC_Define)</DCC_Define>
+			<DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+			<DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+			<DCC_E>false</DCC_E>
+			<DCC_N>false</DCC_N>
+			<DCC_S>false</DCC_S>
+			<DCC_F>false</DCC_F>
+			<DCC_K>false</DCC_K>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win64)'!=''">
+			<VerInfo_Keys>CompanyName=FinLine Co., Ltd.;FileDescription=HP/LS Application Server;FileVersion=1.0.5.450;InternalName=FSAppServer.exe;LegalCopyright=(C) 2012, FinLine Co., Ltd.;LegalTrademarks=(C) 2012, FinLine Co., Ltd.;OriginalFilename=FSAppServer.exe;ProductName=FSAppServer.exe;ProductVersion=1.0.0.0;Comments=Application Server for FinSoft HP/LS core;Written By=Montri Patchaiyo (thecrgrt@yahoo.com, thecrgrt@gmail.com);SpecialBuild=คลังเศรษฐการ (64-bit version)</VerInfo_Keys>
+			<VerInfo_Special>true</VerInfo_Special>
+			<DCC_ExeOutput>..\..\bin64\server\</DCC_ExeOutput>
+			<DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
+			<DCC_UsePackage>DBXOdbcDriver;DBXSybaseASEDriver;vclimg;vclactnband;vcldb;vcldsnap;bindcompvcl;vclie;DBXDb2Driver;vcltouch;websnap;VclSmp;vcl;DBXMSSQLDriver;dsnapcon;vclx;webdsnap;adortl;$(DCC_UsePackage)</DCC_UsePackage>
+			<DCC_DcuOutput>..\..\dcu64\</DCC_DcuOutput>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win32)'!=''">
+			<VerInfo_Keys>CompanyName=FinLine Co., Ltd.;FileDescription=HP/LS Application Server;FileVersion=1.0.5.450;InternalName=FSAppServer.exe;LegalCopyright=(C) 2012, FinLine Co., Ltd.;LegalTrademarks=(C) 2012, FinLine Co., Ltd.;OriginalFilename=FSAppServer.exe;ProductName=FSAppServer.exe;ProductVersion=1.0.0.0;Comments=Application Server for FinSoft HP/LS core;Written By=Montri Patchaiyo (thecrgrt@yahoo.com, thecrgrt@gmail.com);SpecialBuild=คลังเศรษฐการ (32-bit version)</VerInfo_Keys>
+			<VerInfo_Special>true</VerInfo_Special>
+			<DCC_ExeOutput>..\..\bin\server\</DCC_ExeOutput>
+			<DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+			<DCC_UsePackage>vcldbx;TeeDB;inetdbbde;vclib;DBXOdbcDriver;Tee;DBXSybaseASEDriver;ibxpress;svnui;vclimg;fmi;intrawebdb_120_160;vclactnband;vcldb;FMXTee;vcldsnap;bindcompvcl;TeeUI;vclie;DBXDb2Driver;Intraweb_120_160;vcltouch;websnap;vclribbon;VclSmp;vcl;DataSnapConnectors;CloudService;DBXMSSQLDriver;FmxTeeUI;dsnapcon;vclx;webdsnap;svn;bdertl;adortl;$(DCC_UsePackage)</DCC_UsePackage>
+			<DCC_DcuOutput>..\..\dcu\</DCC_DcuOutput>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+			<DCC_RemoteDebug>true</DCC_RemoteDebug>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<DCC_RemoteDebug>false</DCC_RemoteDebug>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<VerInfo_AutoGenVersion>true</VerInfo_AutoGenVersion>
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
+			<Icon_MainIcon>ERPAppServer_Icon.ico</Icon_MainIcon>
+			<VerInfo_Keys>CompanyName=FinLine Co., Ltd.;FileDescription=HP/LS Application Server;FileVersion=1.0.5.450;InternalName=FSAppServer.exe;LegalCopyright=(C) 2012, FinLine Co., Ltd.;LegalTrademarks=(C) 2012, FinLine Co., Ltd.;OriginalFilename=FSAppServer.exe;ProductName=FSAppServer.exe;ProductVersion=1.0.0.0;Comments=Application Server for FinSoft HP/LS core;Written By=Montri Patchaiyo (thecrgrt@yahoo.com, thecrgrt@gmail.com);SpecialBuild=คลังเศรษฐการ (64-bit version)</VerInfo_Keys>
+			<VerInfo_Special>true</VerInfo_Special>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+			<VerInfo_MinorVer>1</VerInfo_MinorVer>
+			<VerInfo_AutoGenVersion>false</VerInfo_AutoGenVersion>
+			<Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
+			<VerInfo_Build>4</VerInfo_Build>
+			<VerInfo_Release>1</VerInfo_Release>
+			<VerInfo_Keys>CompanyName=UIT Co,Ltd.;FileDescription=UITSoft Application Server;FileVersion=1.1.1.4;InternalName=BluecrossXEServer.exe;LegalCopyright=(C) 2012, UITSoft  Co., Ltd.;LegalTrademarks=(C) 2012, UITSoft  Co., Ltd.;OriginalFilename=BluecrossXEServer.exe;ProductName=BluecrossXEServer.exe;ProductVersion=1.0.0.0;Comments=Application Server for UITSoft core;Written By=Jongruk Aripoo (jongruk.a@hotmail.com);SpecialBuild=UITSoft (32-bit version)</VerInfo_Keys>
+			<VerInfo_Special>true</VerInfo_Special>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="$(MainSource)">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="DSContainerModule.pas">
+				<Form>DSServiceContainer</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\lib\ServerUnit\FileInfo.pas"/>
+			<DCCReference Include="MainServerForm.pas">
+				<Form>frmMainServer</Form>
+			</DCCReference>
+			<DCCReference Include="DSMainClass.pas">
+				<Form>DSMain</Form>
+				<DesignClass>TDSServerModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DSServerConstant.pas"/>
+			<DCCReference Include="..\lib\ServerUnit\OpenCryptUtils.pas"/>
+			<DCCReference Include="DSAuthorizedManagerClass.pas">
+				<Form>DSAuthorizedManager</Form>
+				<DesignClass>TDSServerModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DSSetupClass.pas">
+				<Form>DSSetup</Form>
+				<DesignClass>TDSServerModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DSPurchaseClass.pas">
+				<Form>DSPurchase</Form>
+				<FormType>dfm</FormType>
+				<DesignClass>TDSServerModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DSAssignWorkClass.pas">
+				<Form>DSAssignWork</Form>
+				<DesignClass>TDSServerModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DSReceiveMoneyClass.pas">
+				<Form>DSReceiveMoney</Form>
+				<DesignClass>TDSServerModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DSRegistationClass.pas">
+				<Form>DSRegistation</Form>
+				<DesignClass>TDSServerModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DSCarSaleClass.pas">
+				<Form>DSCarSale</Form>
+				<DesignClass>TDSServerModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DSStockClass.pas">
+				<Form>DSSTOCK</Form>
+				<FormType>dfm</FormType>
+				<DesignClass>TDSServerModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DSHISSetupClass.pas">
+				<Form>DSHISSetup</Form>
+				<DesignClass>TDSServerModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DSHISMainClass.pas">
+				<Form>DSHISMain</Form>
+				<DesignClass>TDSServerModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DSHIS43FileClass.pas">
+				<Form>DSHIS43File</Form>
+				<DesignClass>TDSServerModule</DesignClass>
+			</DCCReference>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1054</VersionInfo>
+						<VersionInfo Name="CodePage">874</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Source>
+						<Source Name="MainSource">BluecrossXEServer.dpr</Source>
+					</Source>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcboffice2k160.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcbofficexp160.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k160.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dclofficexp160.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+				<Deployment/>
+				<Platforms>
+					<Platform value="Win64">True</Platform>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+				<ModelSupport>False</ModelSupport>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+	</Project>

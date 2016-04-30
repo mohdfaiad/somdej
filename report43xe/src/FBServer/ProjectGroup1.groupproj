@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{54C929E4-5C87-4D43-9196-50C6E1EFAAA3}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="ERPAppServer.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="..\Client\Projects\OBSS.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="ERPAppServer">
+			<MSBuild Projects="ERPAppServer.dproj"/>
+		</Target>
+		<Target Name="ERPAppServer:Clean">
+			<MSBuild Projects="ERPAppServer.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="ERPAppServer:Make">
+			<MSBuild Projects="ERPAppServer.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="OBSS">
+			<MSBuild Projects="..\Client\Projects\OBSS.dproj"/>
+		</Target>
+		<Target Name="OBSS:Clean">
+			<MSBuild Projects="..\Client\Projects\OBSS.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="OBSS:Make">
+			<MSBuild Projects="..\Client\Projects\OBSS.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="ERPAppServer;OBSS"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="ERPAppServer:Clean;OBSS:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="ERPAppServer:Make;OBSS:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

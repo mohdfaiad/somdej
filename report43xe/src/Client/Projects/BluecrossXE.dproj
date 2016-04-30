@@ -1,0 +1,343 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{E9CD7DBC-875D-4273-913A-5C8C08DE6AA5}</ProjectGuid>
+			<ProjectVersion>13.4</ProjectVersion>
+			<MainSource>BluecrossXE.dpr</MainSource>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<AppType>Application</AppType>
+			<FrameworkType>VCL</FrameworkType>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<Platform Condition="'$(Platform)'==''">Win32</Platform>
+			<TargetedPlatforms>3</TargetedPlatforms>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+			<Base_Win64>true</Base_Win64>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+			<Base_Win32>true</Base_Win32>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win64)'!=''">
+			<Cfg_1_Win64>true</Cfg_1_Win64>
+			<CfgParent>Cfg_1</CfgParent>
+			<Cfg_1>true</Cfg_1>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+			<Cfg_1_Win32>true</Cfg_1_Win32>
+			<CfgParent>Cfg_1</CfgParent>
+			<Cfg_1>true</Cfg_1>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win64)'!=''">
+			<Cfg_2_Win64>true</Cfg_2_Win64>
+			<CfgParent>Cfg_2</CfgParent>
+			<Cfg_2>true</Cfg_2>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+			<Cfg_2_Win32>true</Cfg_2_Win32>
+			<CfgParent>Cfg_2</CfgParent>
+			<Cfg_2>true</Cfg_2>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<Manifest_File>None</Manifest_File>
+			<VerInfo_MinorVer>6</VerInfo_MinorVer>
+			<VerInfo_Keys>CompanyName=FinLine Co., Ltd.;FileDescription=LOS web-based application for HP/LS;FileVersion=1.6.4.450;InternalName=HP/LS LOS;LegalCopyright=(C) 2011, FinLine Co., Ltd.;LegalTrademarks=(C) 2011, FinLine Co., Ltd.;OriginalFilename=HP/LS LOS;ProductName=HP/LS LOS;ProductVersion=1.0.0.0;Comments=LOS web-based application for HP/LS;SpecialBuild=for LH Bank</VerInfo_Keys>
+			<VerInfo_Build>450</VerInfo_Build>
+			<VerInfo_Special>true</VerInfo_Special>
+			<VerInfo_Release>4</VerInfo_Release>
+			<DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;$(DCC_Namespace)</DCC_Namespace>
+			<VerInfo_Locale>1054</VerInfo_Locale>
+			<DCC_UsePackage>vclx;vcl;VclSmp;rtl;vclimg;svnui;svn;bdertl;TeeUI;TeeDB;Tee;vclactnband;vcldb;dbrtl;vcldbx;vcltouch;xmlrtl;dsnap;dsnapcon;vclib;ibxpress;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_110_150;Intraweb_110_150;vclie;websnap;webdsnap;inetdb;inetdbbde;inetdbxpress;soaprtl;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapClient;dbxcds;DataSnapServer;AzureCloud;DBXInterBaseDriver;DBXMySQLDriver;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;frx15;frxADO15;frxBDE15;frxcs15;frxDB15;frxDBX15;frxe15;frxIBX15;frxTee15;fs15;fsADO15;fsBDE15;fsDB15;fsIBX15;fsTee15;UIBD15Win32R;SynEdit_R2011;uniGUI15;uniGUI15Ex;$(DCC_UsePackage)</DCC_UsePackage>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_DcuOutput>.\$(Config)\$(Platform)</DCC_DcuOutput>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win64)'!=''">
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<DCC_ExeOutput>..\..\..\bin64\client</DCC_ExeOutput>
+			<DCC_Namespace>System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
+			<DCC_DcuOutput>..\..\..\dcu64</DCC_DcuOutput>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win32)'!=''">
+			<VerInfo_Debug>true</VerInfo_Debug>
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<VerInfo_MinorVer>1</VerInfo_MinorVer>
+			<VerInfo_Special>false</VerInfo_Special>
+			<DCC_UnitSearchPath>..\..\lib;..\..\lib\DSClientIntf;\fstools;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<DCC_ExeOutput>..\..\..\bin\client</DCC_ExeOutput>
+			<DCC_DcuOutput>..\..\..\dcu</DCC_DcuOutput>
+			<DCC_Namespace>System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.1.4.450;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<DCC_Define>DEBUG;FSLOSHP;GETCOMPONENTS;$(DCC_Define)</DCC_Define>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+			<VerInfo_Debug>true</VerInfo_Debug>
+			<VerInfo_Special>false</VerInfo_Special>
+			<VerInfo_Build>454</VerInfo_Build>
+			<VerInfo_MinorVer>1</VerInfo_MinorVer>
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.1.4.454;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<VerInfo_AutoGenVersion>true</VerInfo_AutoGenVersion>
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;FSLOSHP;SETCOMPONENTS;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.6.4.450;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="$(MainSource)">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="ServerModuleEx.pas">
+				<Form>UniServerModule</Form>
+				<DesignClass>TUniGUIServerModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="MainModuleEx.pas">
+				<Form>UniMainModule</Form>
+				<DesignClass>TUniGUIMainModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\ClientForm\MainMasterForm.pas">
+				<Form>MasterForm</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\ClientForm\MainFrameClass.pas">
+				<Form>FrameMainClass</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\ClientForm\MainDataFormClass.pas">
+				<Form>MainDataForm</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\ClientForm\MainGridFormClass.pas">
+				<Form>MainGridForm</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\ClientForm\PopupMainClassForm.pas">
+				<Form>PopupMainClass</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSMainIntf.pas"/>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSMainIntfDM.pas">
+				<Form>DSMainDM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\ClientUnit\ClientUtils.pas"/>
+			<DCCReference Include="..\..\lib\ClientUnit\XeUniGUIComponents.pas"/>
+			<DCCReference Include="..\..\lib\popupForm\PopupArForm.pas">
+				<Form>frmPopupAr</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\popupForm\PopupProductForm.pas">
+				<Form>frmPopupProduct</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\popupForm\PopupApForm.pas">
+				<Form>frmPopupAp</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\popupForm\PopupAc1Form.pas">
+				<Form>frmPopupAc1</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\popupForm\PopupCsmForm.pas">
+				<Form>frmPopupCsm</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\popupForm\PopupProductIM1Form.pas">
+				<Form>frmPopupProductIM1</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\popupForm\PopupProductByItcForm.pas">
+				<Form>frmPopupProductByItc</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\ClientForm\MainPopupDataFormClass.pas">
+				<Form>MainPopupDataForm</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="menu\frmMainMenusForm.pas">
+				<Form>frmMainMemus</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\popupForm\PopupRedCardForm.pas">
+				<Form>frmPopupRedCard</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\popupForm\PopupApplicationForm.pas">
+				<Form>frmPopupApplication</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\ClientForm\MainReportForm.pas">
+				<Form>MainReportFrm</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\ClientForm\MainPrintForm.pas">
+				<Form>MainPrint</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\popupForm\PopupFg1ListForm.pas">
+				<Form>frmPopupFg1List</Form>
+			</DCCReference>
+			<DCCReference Include="Patients\uPatientInfo.pas">
+				<Form>frmPatientInfo</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Nutrition\uNutrition.pas">
+				<Form>frmNutrition</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="HISSystemSetting\uHISSystemSetting.pas">
+				<Form>frmHISSystemSetting</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="HISSystemSetting\SstmPgCon01Frm.pas">
+				<Form>frmSstmPgCon01</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\DSClientIntf\DS43FileIntf.pas"/>
+			<DCCReference Include="..\..\lib\DSClientIntf\DS43FileIntfDM.pas">
+				<Form>DS43FileDM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Report43File\Rp43OPD01Form.pas">
+				<Form>frmRp43OPD01Grid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Report43File\Rp43ExportForm.pas">
+				<Form>frmRp43Export</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Report43File\Rp43LaborRoom.pas">
+				<Form>frmRp43LaborRoom</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Report43File\Rp43OPD02Form.pas">
+				<Form>frmRp43OPD02Grid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Report43File\Rp43Person.pas">
+				<Form>frmRp43Person</Form>
+				<FormType>dfm</FormType>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Report43File\Rp43ThaiMassage.pas">
+				<Form>frmRp43ThaiMassage</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Report43File\Rp43Community.pas">
+				<Form>frmRp43Community</Form>
+				<FormType>dfm</FormType>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Report43File\uSystemSetting.pas">
+				<Form>frmSystemSetting</Form>
+				<FormType>dfm</FormType>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Report43File\uBatchHistory.pas">
+				<Form>frmBatchHistory</Form>
+				<FormType>dfm</FormType>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="CliConstant.pas"/>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">BluecrossXE.dpr</Source>
+					</Source>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">6</VersionInfo>
+						<VersionInfo Name="Release">4</VersionInfo>
+						<VersionInfo Name="Build">450</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">True</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1054</VersionInfo>
+						<VersionInfo Name="CodePage">874</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">FinLine Co., Ltd.</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription">LOS web-based application for HP/LS</VersionInfoKeys>
+						<VersionInfoKeys Name="FileVersion">1.6.4.450</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName">HP/LS LOS</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalCopyright">(C) 2011, FinLine Co., Ltd.</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalTrademarks">(C) 2011, FinLine Co., Ltd.</VersionInfoKeys>
+						<VersionInfoKeys Name="OriginalFilename">HP/LS LOS</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductName">HP/LS LOS</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments">LOS web-based application for HP/LS</VersionInfoKeys>
+						<VersionInfoKeys Name="SpecialBuild">for LH Bank</VersionInfoKeys>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcboffice2k160.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcbofficexp160.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k160.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dclofficexp160.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+				<Platforms>
+					<Platform value="Win64">True</Platform>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+				<ModelSupport>False</ModelSupport>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

@@ -1,0 +1,1111 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{E9CD7DBC-875D-4273-913A-5C8C08DE6AA5}</ProjectGuid>
+			<ProjectVersion>13.4</ProjectVersion>
+			<MainSource>OBSS.dpr</MainSource>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<AppType>Application</AppType>
+			<FrameworkType>VCL</FrameworkType>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<Platform Condition="'$(Platform)'==''">Win32</Platform>
+			<TargetedPlatforms>3</TargetedPlatforms>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+			<Base_Win64>true</Base_Win64>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+			<Base_Win32>true</Base_Win32>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win64)'!=''">
+			<Cfg_1_Win64>true</Cfg_1_Win64>
+			<CfgParent>Cfg_1</CfgParent>
+			<Cfg_1>true</Cfg_1>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+			<Cfg_1_Win32>true</Cfg_1_Win32>
+			<CfgParent>Cfg_1</CfgParent>
+			<Cfg_1>true</Cfg_1>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win64)'!=''">
+			<Cfg_2_Win64>true</Cfg_2_Win64>
+			<CfgParent>Cfg_2</CfgParent>
+			<Cfg_2>true</Cfg_2>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+			<Cfg_2_Win32>true</Cfg_2_Win32>
+			<CfgParent>Cfg_2</CfgParent>
+			<Cfg_2>true</Cfg_2>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<Manifest_File>None</Manifest_File>
+			<VerInfo_MinorVer>6</VerInfo_MinorVer>
+			<VerInfo_Keys>CompanyName=FinLine Co., Ltd.;FileDescription=LOS web-based application for HP/LS;FileVersion=1.6.4.450;InternalName=HP/LS LOS;LegalCopyright=(C) 2011, FinLine Co., Ltd.;LegalTrademarks=(C) 2011, FinLine Co., Ltd.;OriginalFilename=HP/LS LOS;ProductName=HP/LS LOS;ProductVersion=1.0.0.0;Comments=LOS web-based application for HP/LS;SpecialBuild=for LH Bank</VerInfo_Keys>
+			<VerInfo_Build>450</VerInfo_Build>
+			<VerInfo_Special>true</VerInfo_Special>
+			<VerInfo_Release>4</VerInfo_Release>
+			<DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;$(DCC_Namespace)</DCC_Namespace>
+			<VerInfo_Locale>1054</VerInfo_Locale>
+			<DCC_UsePackage>vclx;vcl;VclSmp;rtl;vclimg;svnui;svn;bdertl;TeeUI;TeeDB;Tee;vclactnband;vcldb;dbrtl;vcldbx;vcltouch;xmlrtl;dsnap;dsnapcon;vclib;ibxpress;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_110_150;Intraweb_110_150;vclie;websnap;webdsnap;inetdb;inetdbbde;inetdbxpress;soaprtl;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapClient;dbxcds;DataSnapServer;AzureCloud;DBXInterBaseDriver;DBXMySQLDriver;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;frx15;frxADO15;frxBDE15;frxcs15;frxDB15;frxDBX15;frxe15;frxIBX15;frxTee15;fs15;fsADO15;fsBDE15;fsDB15;fsIBX15;fsTee15;UIBD15Win32R;SynEdit_R2011;uniGUI15;uniGUI15Ex;$(DCC_UsePackage)</DCC_UsePackage>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_DcuOutput>.\$(Config)\$(Platform)</DCC_DcuOutput>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win64)'!=''">
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<DCC_ExeOutput>..\..\..\bin64\client</DCC_ExeOutput>
+			<DCC_Namespace>System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
+			<DCC_DcuOutput>..\..\..\dcu64</DCC_DcuOutput>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win32)'!=''">
+			<DCC_UnitSearchPath>..\..\lib;..\..\lib\DSClientIntf;\fstools;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<DCC_ExeOutput>..\..\..\bin\client</DCC_ExeOutput>
+			<DCC_DcuOutput>..\..\..\dcu</DCC_DcuOutput>
+			<DCC_Namespace>System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<DCC_Define>DEBUG;FSLOSHP;GETCOMPONENTS;$(DCC_Define)</DCC_Define>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+			<VerInfo_AutoGenVersion>true</VerInfo_AutoGenVersion>
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.6.4.450;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<VerInfo_AutoGenVersion>true</VerInfo_AutoGenVersion>
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;FSLOSHP;SETCOMPONENTS;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.6.4.450;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="$(MainSource)">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="ServerModuleEx.pas">
+				<Form>UniServerModule</Form>
+				<DesignClass>TUniGUIServerModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="MainModuleEx.pas">
+				<Form>UniMainModule</Form>
+				<DesignClass>TUniGUIMainModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\ClientForm\MainMasterForm.pas">
+				<Form>MasterForm</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\ClientForm\MainFrameClass.pas">
+				<Form>FrameMainClass</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\ClientForm\MainDataFormClass.pas">
+				<Form>MainDataForm</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\ClientForm\MainGridFormClass.pas">
+				<Form>MainGridForm</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\ClientForm\PopupMainClassForm.pas">
+				<Form>PopupMainClass</Form>
+			</DCCReference>
+			<DCCReference Include="purchase\order\PsRcvNoDataForm.pas">
+				<Form>frmPsRcvNoPoData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="purchase\order\PsAppPoDataForm.pas">
+				<Form>frmPsAppPoData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="purchase\order\PsAppPoGridForm.pas">
+				<Form>frmPsAppPoGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="purchase\order\PsApprCreditGridForm.pas">
+				<Form>frmPsApprCreditGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="purchase\order\PsPoDataForm.pas">
+				<Form>frmPsPoData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="purchase\order\PsPoGridForm.pas">
+				<Form>frmPsPoGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="purchase\order\PsRcvByPoDataForm.pas">
+				<Form>frmPsRcvByPoData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="purchase\order\PsRcvByPoGridForm.pas">
+				<Form>frmPsRcvByPoGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="purchase\payment\PsAppApprPaymentGridForm.pas">
+				<Form>frmPsAppApprPaymentGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="purchase\payment\PsAppApprPaymentDataForm.pas">
+				<Form>frmPsAppApprPaymentData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="purchase\payment\PsPaymentByAppGridForm.pas">
+				<Form>frmPsPaymentByAppGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="purchase\payment\PsPaymentByAppDataForm.pas">
+				<Form>frmPsPaymentByAppData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="purchase\payment\PsCashPaymentGridForm.pas">
+				<Form>frmPsCashPaymentGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="purchase\payment\PsCashPaymentDataForm.pas">
+				<Form>frmPsCashPaymentData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="purchase\payment\PsChequeClearingGridForm.pas">
+				<Form>frmPsChequeClearingGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Ap\ApInqGridForm.pas">
+				<Form>frmApInqGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Ap\ApInqDataForm.pas">
+				<Form>frmApInqData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="stock\SkRcvCarInMixerDataForm.pas">
+				<Form>frmSkRcvCarInMixerData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="stock\popup\PopupCarForm.pas">
+				<Form>PopupCar</Form>
+			</DCCReference>
+			<DCCReference Include="stock\SkOutCarFromMixerDataForm.pas">
+				<Form>frmSkOutCarFromMixerData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="stock\SkRcvCarFromMixerDataForm.pas">
+				<Form>frmSkRcvCarFromMixerData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="stock\SkRcvCarFromComDataForm.pas">
+				<Form>frmSkRcvCarFromComData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="stock\SkMoveCarBetweenBrnDataForm.pas">
+				<Form>frmSkMoveCarBetweenBrnData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="stock\SkStockInqDataForm.pas">
+				<Form>frmSkStockInqData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="stock\SkStockInqForm.pas">
+				<Form>frmSkStockInq</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="CarSale\Sale\CsAppSetupAccessoryForm.pas">
+				<Form>frmCsAppSetupAccessoryGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="CarSale\Sale\CsAppSetupAccessoryDataForm.pas">
+				<Form>frmCsAppSetupAccessoryData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="CarSale\Sale\CsApprSetupAccessoryDataForm.pas">
+				<Form>frmCsApprSetupAccessoryData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="CarSale\Sale\CsRcvMoneyAdvanceForm.pas">
+				<Form>frmCsRcvMoneyAdvanceGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="CarSale\Sale\CsRcvMoneyAdvanceDataForm.pas">
+				<Form>frmCsRcvMoneyAdvanceData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="NormalSale\NSPurchaseOrderForm.pas">
+				<Form>frmNsPurchaseOrderGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="NormalSale\NsPurchaseOrderDataForm.pas">
+				<Form>frmNsPurchaseOrderData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="NormalSale\NSSentOrderForm.pas">
+				<Form>frmNsSentOrderGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="NormalSale\NsSentOrderDataForm.pas">
+				<Form>frmNsSentOrderData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="NormalSale\NSSentNoOrderForm.pas">
+				<Form>frmNsSentNoOrderGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="NormalSale\NsSentNoOrderDataForm.pas">
+				<Form>frmNsSentNoOrderData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="NormalSale\NSDebitCreditNoteForm.pas">
+				<Form>frmNsDebitCreditNoteGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="NormalSale\NsDebitCreditNoteDataForm.pas">
+				<Form>frmNsSDebitCreditNoteData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="ReceiveMoney\RmReceiveMoneyDataForm.pas">
+				<Form>frmRmReceiveMoneyDataT</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="ReceiveMoney\RmReceiveMoneyForm.pas">
+				<Form>frmRmReceiveMoneyGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="ReceiveMoney\RmReceiveDownDataForm.pas">
+				<Form>frmRmReceiveDownData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="ReceiveMoney\RmReceiveDownForm.pas">
+				<Form>frmRmReceiveDownGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="ReceiveMoney\RmCheqToBankDataForm.pas">
+				<Form>frmRmCheqToBankData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="ReceiveMoney\RmChangeNewCheqDataForm.pas">
+				<Form>frmRmChangeNewCheqData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Registation\In\RgGetMoneyPayForm.pas">
+				<Form>frmRgGetMoneyPayGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Registation\In\RgGetMoneyPayDataForm.pas">
+				<Form>frmRgGetMoneyPayData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Registation\In\RgSentMoneyPayForm.pas">
+				<Form>frmRgSentMoneyPayGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Registation\In\RgSentMoneyPayDataForm.pas">
+				<Form>frmRgSentMoneyPayData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Registation\Out\RgInqRegistationDataForm.pas">
+				<Form>frmRgInqRegistationData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RedRegistation\RrInqRedCardDataForm.pas">
+				<Form>frmRrInqRedCardData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="SaleAnalyst\SaAnalystInqForm.pas">
+				<Form>frmSaAnalystInq</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="MoneySystem\MsSetupMoneyCodeForm.pas">
+				<Form>frmMsSetupMoneyCodeGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="MoneySystem\MsSetupMoneyCodetDataForm.pas">
+				<Form>frmMsSetupMoneyCodeData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="MoneySystem\MsSetupAccountTextDataForm.pas">
+				<Form>frmMsSetupAccountTextData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="MoneySystem\MsSetupLineSummarryDataForm.pas">
+				<Form>frmMsSetupLineSummarryData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="MoneySystem\MsSetupLineSummarryForm.pas">
+				<Form>frmMsSetupLineSummarryGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="MoneySystem\MsSetupCopyCancelCodeForm.pas">
+				<Form>frmMsSetupCopyCancelCodeGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="MoneySystem\MsSetupCopyCancelCodetDataForm.pas">
+				<Form>frmMsSetupCopyCancelCodeData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="MoneySystem\MsSelectCodeMoneyDataForm.pas">
+				<Form>frmMsSelectCodeMoneyData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="MoneySystem\MsChangeMoneyDataForm.pas">
+				<Form>frmMsChangeMoneyData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="MoneySystem\MsSetupAccountTextForm.pas">
+				<Form>frmMsSetupAccountTextGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AccountSystem\AsSetupOrgDataForm.pas">
+				<Form>frmAsSetupOrgData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AccountSystem\AsSetupOrgForm.pas">
+				<Form>frmAsSetupOrgGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AccountSystem\AsSetupAccDataForm.pas">
+				<Form>frmAsSetupAccData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AccountSystem\AsSetupAccForm.pas">
+				<Form>frmAsSetupAccGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AccountSystem\AsSetupAccOnBookDataForm.pas">
+				<Form>frmAsSetupAccOnBookData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AccountSystem\AsSetupAccOnBookForm.pas">
+				<Form>frmAsSetupAccOnBookGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AccountSystem\AsSetupTargetDataForm.pas">
+				<Form>frmAsSetupTargetData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AccountSystem\AsSetupBBFDataForm.pas">
+				<Form>frmAsSetupBBFData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AccountSystem\AsDocDailyDataForm.pas">
+				<Form>frmAsDocDailyData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AccountSystem\popup\AsPopLinkSystemDataForm.pas">
+				<Form>frmAsLinkSystemData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AccountSystem\AsGLDataForm.pas">
+				<Form>frmAsGLData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssetSystem\AssAmtLostForm.pas">
+				<Form>frmAssAmtLostGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssetSystem\AssSaleAssetDataForm.pas">
+				<Form>frmAssSaleAssetData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssetSystem\AssSaleAssetForm.pas">
+				<Form>frmAssSaleAssetGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssetSystem\AssSaleAssetLostDataForm.pas">
+				<Form>frmAssSaleAssetLostData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssetSystem\AssSaleAssetLostForm.pas">
+				<Form>frmAssSaleAssetLostGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssetSystem\AssUndefinedAssetDataForm.pas">
+				<Form>frmAssUndefinedAssetData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssetSystem\AssUndefinedAssetForm.pas">
+				<Form>frmAssUndefinedAssetGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssetSystem\AssMoveAssetBetweenBrnDataForm.pas">
+				<Form>frmAssMoveAssetBetweenBrnData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssetSystem\AssMoveAssetBetweenBrnForm.pas">
+				<Form>frmAssMoveAssetBetweenBrnGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="TaxSystem\TaxSale\TxTaxDataForm.pas">
+				<Form>frmTxTaxData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="TaxSystem\TaxSale\TxTaxForm.pas">
+				<Form>frmTxTaxGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="TaxSystem\TaxSale\TxChangeDescInTaxSaleForm.pas">
+				<Form>frmTxChangeDescInTaxSaleGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="TaxSystem\TaxBuy\TxChangeDescInTaxBuyForm.pas">
+				<Form>frmTxChangeDescInTaxBuyGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="TaxSystem\TaxBuy\TxSelectSentTaxBuyForm.pas">
+				<Form>frmTxSelectSentTaxBuyGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="TaxSystem\TaxSale\TxSelectSentTaxSaleForm.pas">
+				<Form>frmTxSelectSentTaxSaleGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="TaxSystem\WHT\TxChangeDocNoWHTForm.pas">
+				<Form>frmTxChangeDocNoWHTGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssetSystem\popup\PopupAmtLostForm.pas">
+				<Form>frmPopupAmtLost</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="CarSale\Customer\popup\PopupAddressForm.pas">
+				<Form>PopupAddress</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="CarSale\Customer\popup\PopupCardForm.pas">
+				<Form>frmPopupCard</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StDtlCodeForm.pas">
+				<Form>frmStDtlCodeGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StHdrCodeForm.pas">
+				<Form>frmStHdrCodeGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\popup\PopupStDtlCodeForm.pas">
+				<Form>frmPopupStDtlCode</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\popup\PopupStHdrCodeForm.pas">
+				<Form>frmPopupStHdrCode</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StRunningForm.pas">
+				<Form>frmStRunningGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StRunningDataForm.pas">
+				<Form>frmStRunningData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSMainIntf.pas"/>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSMainIntfDM.pas">
+				<Form>DSMainDM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSAuthorizedManagerIntf.pas"/>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSAuthorizedManagerIntfDM.pas">
+				<Form>DSAuthorizedManagerDM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\ClientUnit\ClientUtils.pas"/>
+			<DCCReference Include="..\..\lib\ClientUnit\XeUniGUIComponents.pas"/>
+			<DCCReference Include="Setup\popup\PopupStNb1BrnGenDocForm.pas">
+				<Form>frmPopupStNb1BrnGenDoc</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StApForm.pas">
+				<Form>frmStApGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Ar\ArInqDataForm.pas">
+				<Form>frmArInqData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Ar\ArInqGridForm.pas">
+				<Form>frmArInqGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StArDataForm.pas">
+				<Form>frmStArData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StArForm.pas">
+				<Form>frmStArGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StProductForm.pas">
+				<Form>frmStProductGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StProductDataForm.pas">
+				<Form>frmStProductData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StTargetByProductDataForm.pas">
+				<Form>frmStTargetByProductData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StTargetByProductForm.pas">
+				<Form>frmStTargetByProductGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StTargetBySalemanDataForm.pas">
+				<Form>frmStTargetBySalemanData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StTargetBySalemanForm.pas">
+				<Form>frmStTargetBySaleManGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StFrameNoForm.pas">
+				<Form>frmStFrameNoGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\popupForm\PopupArForm.pas">
+				<Form>frmPopupAr</Form>
+			</DCCReference>
+			<DCCReference Include="Setup\StFrameNoDataForm.pas">
+				<Form>frmStFrameNoData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\popup\PopupStAm3Form.pas">
+				<Form>frmPopupStAm3</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\popupForm\PopupProductForm.pas">
+				<Form>frmPopupProduct</Form>
+			</DCCReference>
+			<DCCReference Include="Setup\StCtShpForm.pas">
+				<Form>frmStCtShpGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StCtShpDataForm.pas">
+				<Form>frmStCtShpData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StCtCm3DataForm.pas">
+				<Form>frmStCtCm3Data</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StCtCm3Form.pas">
+				<Form>frmStCtCm3Grid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StCtRm1Form.pas">
+				<Form>frmStCtRm1Grid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StCtRm1DataForm.pas">
+				<Form>frmStCtRm1Data</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StMtRegForm.pas">
+				<Form>frmStMtRegGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StMtRegDataForm.pas">
+				<Form>frmStMtRegData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StMtRegExtraDataForm.pas">
+				<Form>frmStMtRegExtraData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StArOvdAmtForm.pas">
+				<Form>frmStArOvdAmtGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StArOvdAmtDataForm.pas">
+				<Form>frmStArOvdAmtData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\popup\PopupStYm3Form.pas">
+				<Form>frmPopupStYm3</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StApOvdAmtForm.pas">
+				<Form>frmStApOvdAmtGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StApOvdAmtDataForm.pas">
+				<Form>frmStApOvdAmtData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\popupForm\PopupApForm.pas">
+				<Form>frmPopupAp</Form>
+			</DCCReference>
+			<DCCReference Include="Setup\popup\PopupAddrForm.pas">
+				<Form>frmPopupAddr</Form>
+			</DCCReference>
+			<DCCReference Include="Setup\StStarttProductForm.pas">
+				<Form>frmStStartProductGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StStartProductDataForm.pas">
+				<Form>frmStStartProductData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSStockIntf.pas"/>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSSetupIntfDM.pas">
+				<Form>DSSetupDM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSPurchaseIntf.pas"/>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSPurchaseIntfDM.pas">
+				<Form>DSPurchaseDM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Purchase\order\PsRcvProductNoPoForm.pas">
+				<Form>frmPsRcvProductNoPoGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Purchase\order\PsDebitCreditNoteDataForm.pas">
+				<Form>frmPsDebitCreditNoteData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Purchase\order\PsRcvProductNoPoDataForm.pas">
+				<Form>frmPsRcvProductNoPoData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSCarsaleIntf.pas"/>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSCarsaleIntfDM.pas">
+				<Form>DSCarsaleDM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="CarSale\Customer\CsCustomerDataForm.pas">
+				<Form>frmCsCustomerData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="CarSale\Customer\CsCustomerForm.pas">
+				<Form>frmCsCustomerGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\popupForm\PopupAc1Form.pas">
+				<Form>frmPopupAc1</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\popupForm\PopupCsmForm.pas">
+				<Form>frmPopupCsm</Form>
+			</DCCReference>
+			<DCCReference Include="CarSale\Sale\CsAppSaleCarDataForm.pas">
+				<Form>frmCsAppSaleCarData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="CarSale\Sale\CsAppSaleCarForm.pas">
+				<Form>frmCsAppCarsaleGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\popupForm\PopupProductIM1Form.pas">
+				<Form>frmPopupProductIM1</Form>
+			</DCCReference>
+			<DCCReference Include="CarSale\Sale\popup\PopupRCVCardForm.pas">
+				<Form>frmPopupRCVCard</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="CarSale\Sale\popup\PopupExpForm.pas">
+				<Form>frmPopupExp</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="CarSale\Sale\popup\PopupAccessoryForm.pas">
+				<Form>frmPopupAccessory</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\popupForm\PopupProductByItcForm.pas">
+				<Form>frmPopupProductByItc</Form>
+			</DCCReference>
+			<DCCReference Include="CarSale\Sale\popup\PopupDownForm.pas">
+				<Form>frmPopupDown</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSAssignWorkIntf.pas"/>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSAssignWorkIntfDM.pas">
+				<Form>DSAssignWorkDM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssignWork\popup\PopupWeekForm.pas">
+				<Form>frmPopupWeek</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssignWork\popup\PopupMarkFlagForm.pas">
+				<Form>frmPopupWorkFlag</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssignWork\AWRundownTMTForm.pas">
+				<Form>frmAWRundownTMTGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssignWork\AWSetupCalendaForm.pas">
+				<Form>frmAWSetupCalendaGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssignWork\AWRundownTMTCalendaForm.pas">
+				<Form>frmAWRundownTMTCalendaGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssignWork\popup\PopupRunDownForm.pas">
+				<Form>frmPopupRunDown</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssignWork\AWPreAssignForm.pas">
+				<Form>frmAWPreAssignGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssignWork\AWPreAssignCalendaForm.pas">
+				<Form>frmAWPreAssignCalendaGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssignWork\popup\PopupPreAssignForm.pas">
+				<Form>frmPopupPreAssign</Form>
+			</DCCReference>
+			<DCCReference Include="AssignWork\AWAssignNoWeekForm.pas">
+				<Form>frmAWAssignNoWeekGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssignWork\AWAssignNoWeekCalendaForm.pas">
+				<Form>frmAWAssignNoWeekCalendaGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssignWork\popup\PopupAssignNoWeekForm.pas">
+				<Form>frmPopupAssignNoWeek</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\ClientForm\MainPopupDataFormClass.pas">
+				<Form>MainPopupDataForm</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssignWork\popup\PopupAssignWeekForm.pas">
+				<Form>frmPopupAssignWeek</Form>
+			</DCCReference>
+			<DCCReference Include="AssignWork\AWAssignWeekCalendaForm.pas">
+				<Form>frmAWAssignWeekCalendaGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssignWork\AWAssignWeekForm.pas">
+				<Form>frmAWAssignWeekGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssignWork\AWOrderColCalendaForm.pas">
+				<Form>frmAWOrderColCalendaGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssignWork\AWOrderColForm.pas">
+				<Form>frmAWOrderColGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssignWork\popup\PopupOrderColForm.pas">
+				<Form>frmPopupOrderCol</Form>
+			</DCCReference>
+			<DCCReference Include="AssignWork\AWAssignOutCalendaForm.pas">
+				<Form>frmAWAssignOutCalendaGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssignWork\AWAssignOutForm.pas">
+				<Form>frmAWAssignOutGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssignWork\AWAssignPersonalForm.pas">
+				<Form>frmAWAssignPersonalGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="AssignWork\AWAssignPersonalCalendaForm.pas">
+				<Form>frmAWAssignPersonalCalendaGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="menu\frmMainMenusForm.pas">
+				<Form>frmMainMemus</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSReceiveMoneyIntf.pas"/>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSReceiveMoneyIntfDM.pas">
+				<Form>DSReceiveMoneyDM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="ReceiveMoney\popup\PopupRcvMoneyForm.pas">
+				<Form>frmPopupRcvMoney</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="ReceiveMoney\popup\PopupRcvAm4Form.pas">
+				<Form>frmPopupRcvAm4</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\popupForm\PopupRedCardForm.pas">
+				<Form>frmPopupRedCard</Form>
+			</DCCReference>
+			<DCCReference Include="RedRegistation\RrGetAdvanceMoneyForm.pas">
+				<Form>frmRrGetAdvanceMoneyGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RedRegistation\RrGetAdvanceMoneyDataForm.pas">
+				<Form>frmRrGetAdvanceMoneyData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSRegistationIntf.pas"/>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSRegistationIntfDM.pas">
+				<Form>DSRegistationDM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RedRegistation\popup\PopupAdvanceYm4Form.pas">
+				<Form>frmPopupAdvanceYm4</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RedRegistation\RrReturnMoneyRedCardForm.pas">
+				<Form>frmRrReturnMoneyRedCardGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RedRegistation\RrReturnMoneyRedCardDataForm.pas">
+				<Form>frmRrReturnMoneyRedCardData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RedRegistation\popup\PopupAdvanceAm6Form.pas">
+				<Form>frmPopupAdvanceAm6</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RedRegistation\popup\PopupAdvanceForReturnForm.pas">
+				<Form>frmPopupAdvanceForReturn</Form>
+			</DCCReference>
+			<DCCReference Include="Registation\Out\RgRegistationToOutForm.pas">
+				<Form>frmRgRegistationToOutGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Registation\popup\PopupRegistationOm5Form.pas">
+				<Form>frmPopupRegistationOm5</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Registation\Out\RgRegistationToOutDataForm.pas">
+				<Form>frmRgRegistationToOutData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Registation\Out\RgRegistationFromOutForm.pas">
+				<Form>frmRgRegistationFromOutGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Registation\popup\PopupRegistationRg1ListForRg2Form.pas">
+				<Form>frmPopupRegistationRg1ListForRg2</Form>
+			</DCCReference>
+			<DCCReference Include="Registation\popup\PopupRegistationRg1Form.pas">
+				<Form>frmPopupRegistationRg1</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Registation\Out\RgRegistationFromOutDataForm.pas">
+				<Form>frmRgRegistationFromOutData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Registation\popup\PopupRegistationFromOutForm.pas">
+				<Form>frmPopupRegistationFromOutForm</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Registation\Out\RgRegistationBookFromOutForm.pas">
+				<Form>frmRgRegistationBookFromOutGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Registation\Out\RgRegistationBookFromOutDataForm.pas">
+				<Form>frmRgRegistationBookFromOutData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Registation\popup\PopupRegistationRg2ListForBookForm.pas">
+				<Form>frmPopupRegistationRg2ListForBook</Form>
+			</DCCReference>
+			<DCCReference Include="Registation\popup\PopupRegistationRg2Form.pas">
+				<Form>frmPopupRegistationRg2</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Purchase\order\PsRcvProductCarDataForm.pas">
+				<Form>frmPsRcvProductCarData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Purchase\order\PsRcvProductCarForm.pas">
+				<Form>frmPsRcvProductCarGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Purchase\popup\PopupAssignWeekOutForm.pas">
+				<Form>frmPopupAssignWeekOut</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\popupForm\PopupApplicationForm.pas">
+				<Form>frmPopupApplication</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\ClientForm\MainReportForm.pas">
+				<Form>MainReportFrm</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\ClientForm\MainPrintForm.pas">
+				<Form>MainPrint</Form>
+			</DCCReference>
+			<DCCReference Include="CarSale\Sale\CsApprSaleCarForm.pas">
+				<Form>frmCsApprSaleCarGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="CarSale\Sale\CsApprSaleCarDataForm.pas">
+				<Form>frmCsApprSaleCarData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Purchase\order\PsDebitCreditNoteGridForm.pas">
+				<Form>FrmPsDebitCreditNoteGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="BuyAnalyst\PaAnalystInqGridForm.pas">
+				<Form>frmPaAnalystInqGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="SaleAnalyst\SaAnalystInqGridForm.pas">
+				<Form>frmSaAnalystInqGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RedRegistation\RrReceiveMoneyDataForm.pas">
+				<Form>frmRrReceiveMoneyDataT</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RedRegistation\RrReceiveMoneyForm.pas">
+				<Form>frmRrReceiveMoneyGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RedRegistation\redreg_popup\PopupRedRegRcvAm4Form.pas">
+				<Form>frmPopupRedRegRcvAm4</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RedRegistation\redreg_popup\PopupRedRegRcvMoneyForm.pas">
+				<Form>frmPopupRedRegRcvMoney</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Purchase\order\PsAssignOutGridForm.pas">
+				<Form>frmPsAssignOutGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Purchase\order\PsAssignOutForm.pas">
+				<Form>frmPsAssignOutData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StApDataForm.pas">
+				<Form>frmStApData</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StFg1Form.pas">
+				<Form>frmStFg1Grid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\StFg1DataForm.pas">
+				<Form>frmStFg1Data</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Setup\popup\PopupFg1Form.pas">
+				<Form>frmPopupFg1</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\popupForm\PopupFg1ListForm.pas">
+				<Form>frmPopupFg1List</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSSetupIntf.pas"/>
+			<DCCReference Include="..\..\lib\DSClientIntf\DSStockIntfDM.pas">
+				<Form>DSStockDM</Form>
+				<FormType>dfm</FormType>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="stocks\TtStockForm.pas">
+				<Form>frmTtStockGrid</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">OBSS.dpr</Source>
+					</Source>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">6</VersionInfo>
+						<VersionInfo Name="Release">4</VersionInfo>
+						<VersionInfo Name="Build">450</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">True</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1054</VersionInfo>
+						<VersionInfo Name="CodePage">874</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">FinLine Co., Ltd.</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription">LOS web-based application for HP/LS</VersionInfoKeys>
+						<VersionInfoKeys Name="FileVersion">1.6.4.450</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName">HP/LS LOS</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalCopyright">(C) 2011, FinLine Co., Ltd.</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalTrademarks">(C) 2011, FinLine Co., Ltd.</VersionInfoKeys>
+						<VersionInfoKeys Name="OriginalFilename">HP/LS LOS</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductName">HP/LS LOS</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments">LOS web-based application for HP/LS</VersionInfoKeys>
+						<VersionInfoKeys Name="SpecialBuild">for LH Bank</VersionInfoKeys>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcboffice2k160.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2K160.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+				<Platforms>
+					<Platform value="Win64">True</Platform>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+				<ModelSupport>False</ModelSupport>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
