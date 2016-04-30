@@ -1,0 +1,17 @@
+  SELECT aloha_death.hospcode,   
+         aloha_death.pid,   
+         aloha_death.hospdeath,   
+         aloha_death.seq,   
+         aloha_death.an,   
+         aloha_death.ddeath - 5430000 as ddeath,   
+         trim(aloha_death.cdeath_a) as cdeath_a,   
+         trim(aloha_death.cdeath_b) as cdeath_b,   
+         trim(aloha_death.cdeath_c) as cdeath_c,   
+         trim(aloha_death.cdeath_d) as cdeath_d,   
+         aloha_death.odisease,   
+         aloha_death.cdeath,   
+         aloha_death.pregdeath,   
+         aloha_death.pdeath,   
+         aloha_death.provider,   
+         aloha_death.d_update - 5430000000000 as d_update
+    FROM aloha_death  where ddeath between 25571101 and 25571110;

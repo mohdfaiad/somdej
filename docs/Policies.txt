@@ -1,0 +1,28 @@
+Tables Name Policies
+-------------------------------------------------------------
+
+CT = Center
+
+INVMTTPOH00
+
+INV     = System Code  , SYS
+MTT  = Master Table , STT = System Table ,  TRN = Transaction
+POH  = Table Name , Purchase Order Header
+00   =  running
+
+
+POHCODE
+
+COD = Code Int
+CDE = Code String
+
+
+
+
+Programm Name Policies
+------------------------------------------------------------------
+INVPGPO01
+INV = System Codo , PG = Program  Type , PO =  Program name , 01 = Running
+
+INVRPPO01
+RP = Report

@@ -1,0 +1,36 @@
+EPI
+vaccinetype   	keyward43
+vaccineplace  	hosp_name
+-------------------------------------------------------
+PRENATAL
+vdrl_result   	keyward43
+hb_result  	keyward43
+hiv_result		keyward43
+thalassemia	keyward43
+------------------------------------------------------
+ANC
+ancno  		keyward43
+ancresult		keyward43
+ancplace		hosp_name
+-------------------------------------------------------
+LABOR
+bresult		icd10
+bplace		hosp_name
+btype		keyward43
+bdoctor		keyward43
+---------------------------------------------------------
+POSTNATAL
+ppplace		hosp_name
+ppreslt		keyward43
+--------------------------------------------------------
+NEWBORN
+bplace		keyward43
+bhosp		hosp_name
+birthno		keyward43
+btype		keyward43
+bdoctor		keyward43
+asphyxia		keyward43
+vitk		keyward43
+tsh		keyward43
+
+

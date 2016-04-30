@@ -1,0 +1,9 @@
+Doctor: 000010E4: 22:39:11 [Indy]:EIdConnClosedGracefully : Connection Closed Gracefully.
+Doctor: 00001D44: 22:39:11 [Indy]:EIdConnClosedGracefully : Connection Closed Gracefully.
+Doctor: 0000059C: 22:39:11 [Indy]:EIdConnClosedGracefully : Connection Closed Gracefully.
+Doctor: 00001EF4: 22:39:11 [Indy]:EIdConnClosedGracefully : Connection Closed Gracefully.
+Doctor: 00000FE0: 22:39:11 [Indy]:EIdConnClosedGracefully : Connection Closed Gracefully.
+Doctor: 00001910: 22:39:11 [CommandGet]:EClassNotFound : Class TUniPageControl not found
+Doctor: 00001CD8: 22:39:47 [CommandGet]:EClassNotFound : Class TUniPageControl not found
+Doctor: 00001A18: 22:41:38 [CommandGet]:EClassNotFound : Class TUniPageControl not found
+Doctor: 00000D64: 22:42:31 [CommandGet]:EClassNotFound : Class TUniPageControl not found

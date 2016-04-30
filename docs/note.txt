@@ -1,0 +1,46 @@
+CdsStCdeGet  (client) ---> (server class: TDSSetup ) dspStGetCde
+
+    UniButton1.Caption:=UniApplication.Parameters.Values['Button'];
+    UniEdit1.Text:=UniApplication.Parameters.Values['Edit'];
+
+http://localhost:8077/?button=BB&edit=AA
+http://10.10.8.215:8077/?
+http://10.10.8.215/report43/redirect.php?PID=&SEQ=&DATE_SERV=&D_UPDATE=&SYNC=1&STATION=WA
+
+-------------------
+
+object DataSetProvider1: TDataSetProvider
+  DataSet = SQLDataSet1
+  Options = [poAllowCommandText, poUseQuoteChar]
+  Left = 776
+  Top = 80
+end
+object DBConnection: TSQLConnection
+  ConnectionName = 'Devart MySQL Direct'
+  DriverName = 'DevartMySQLDirect'
+  GetDriverFunc = 'getSQLDriverMySQLDirect'
+  LibraryName = 'dbexpmda40.dll'
+  LoginPrompt = False
+  Params.Strings = (
+    'BlobSize=-1'
+    'HostName=10.10.38.11'
+    'DataBase=bluecross_xe'
+    'DriverName=DevartMySQLDirect'
+    'User_Name=root'
+    'Password=P@ssw0rd'
+    'FetchAll=True'
+    'EnableBoolean=False')
+  VendorLib = 'not used'
+  Left = 758
+  Top = 131
+end
+object SQLDataSet1: TSQLDataSet
+  CommandText = 'select * from report43_person limit 1'
+  DbxCommandType = 'Dbx.SQL'
+  MaxBlobSize = -1
+  Params = <>
+  SQLConnection = DBConnection
+  Left = 824
+  Top = 136
+end
+
